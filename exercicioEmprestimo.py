@@ -1,0 +1,16 @@
+nome = str(input('Bom dia, qual o seu nome? '))
+print('Olá {}, seja bem vindo ao Banco do Mundo! '.format(nome))
+valorCasa = float(input('Qual o valor da casa que deseja comprar? '))
+print('O valor da casa é de R${: .2f}'.format(valorCasa))
+salario = float(input('E qual o valor do seu salário? '))
+print('O meu salário é de R${: .2f} .'.format(salario))
+anosPagar = int(input('Em quantos anos pretende pagar? '))
+print('Pretendo pagar em {} anos'.format(anosPagar))
+parcelaMensal = float(valorCasa / (anosPagar * 12))
+print('Será um valor de R${: .2f} por mês'.format(parcelaMensal))
+porcentSalario = float((salario * 30) / 100)
+print('Trinta por cento do seu salário é {: .2f}'.format(porcentSalario))
+if parcelaMensal >= porcentSalario:
+    print('Infelizmente excede o valor permitido, não pode fazer empréstimo! ')
+else:
+    print('Parabéns, empréstimo concedido!')
